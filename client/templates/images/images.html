@@ -1,0 +1,71 @@
+<template name="Images">
+	{{> SectionHeader section="images"}}
+	{{> ImageShapes}}
+	{{> Gallery}}
+	{{> Embed}}
+
+</template>
+
+<template name="ImageShapes">
+	<div class="container">
+		<h2>Image shapes</h2>
+		<div class="row">
+			<div class="col-sm-4">
+				<img  class="img-rounded img-thumbnail img-responsive" src="/flowers.jpg">
+			</div>
+			<div class="col-sm-4">
+				<img class="img-circle img-thumbnail img-responsive"  src="/fuck_yeah.jpg">
+			</div>
+			<div class="col-sm-4">
+				<img class="img-thumbnail img-responsive" src="/dog.jpg">
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="Gallery">
+	<div class="container">
+		<h2>Image gallery</h2>
+		<div class="row">
+		  <div class="col-md-4">
+		    <div class="thumbnail">
+		      <a href="/universe2.jpg">
+		        <img src="/universe1.jpg" alt="Lights" style="width:100%">
+		        <div class="caption">
+		          <p>Lorem ipsum...</p>
+		        </div>
+		      </a>
+		    </div>
+		  </div>
+		  <div class="col-md-4">
+		    <div class="thumbnail">
+		      <a href="/universe2.jpg">
+		        <img src="/universe2.jpg" alt="Nature" style="width:100%">
+		        <div class="caption">
+		          <p>Lorem ipsum...</p>
+		        </div>
+		      </a>
+		    </div>
+		  </div>
+		  <div class="col-md-4">
+		    <div class="thumbnail">
+		      <a href="/universe3.jpg">
+		        <img src="/universe3.jpg" alt="Fjords" style="width:100%">
+		        <div class="caption">
+		          <p>Lorem ipsum...</p>
+		        </div>
+		      </a>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</template>
+
+<template name="Embed">
+	<div class="container">
+		<h2>Responsive embed 16by9 son!</h2>
+		<div class="dat-frame embed-responsive embed-responsive-16by9">
+			<iframe ></iframe>
+		</div>
+	</div>
+</template>
