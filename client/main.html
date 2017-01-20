@@ -4,8 +4,10 @@
 </head>
 
 <body>
-{{> Container}}
-{{> ContainerFluid}}
+  {{> Container}}
+  {{> ContainerFluid}}
+  {{> Grid444}}
+  <div class="container">{{> Grid48}}</div>
 </body>
 
 <template name="Container">
@@ -19,5 +21,26 @@
   <div class="container-fluid">
     <h1>Boostrap boi</h1>
     <p>In a <i>container-fluid</i></p>
+  </div>
+</template>
+
+<template name="Grid444">
+  <div class="row">
+    {{> Col type="sm-4"}}
+    {{> Col type="sm-4"}}
+    {{> Col type="sm-4"}}
+  </div>
+</template>
+
+<template name="Grid48">
+  <div class="row">
+    {{> Col type="sm-4"}}
+    {{> Col type="sm-8"}}
+  </div>
+</template>
+
+<template name="Col">
+  <div class="col-{{type}}">
+    <p>This is a <i>.col-{{type}}</i></p>
   </div>
 </template>

@@ -6,3 +6,7 @@
 .container-fluid {
 	background-color: lavender;
 }
+
+.row {
+	background-color: lightgreen;
+}
