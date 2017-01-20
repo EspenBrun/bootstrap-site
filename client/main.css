@@ -1,1 +1,8 @@
 /* CSS declarations go here */
+.container {
+	background-color: lightblue;
+}
+
+.container-fluid {
+	background-color: lavender;
+}
