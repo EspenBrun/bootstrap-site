@@ -6,8 +6,29 @@
 <body>
   {{> Container}}
   {{> ContainerFluid}}
+
+  <h3 class="h3-info">Following not wrapped</h3>
   {{> Grid444}}
+  
+  <div class="container-fluid">
+    <h3 class="h3-info">Following wrapped in <i>container-fluid</i></h3>
+    {{> Grid444}}
+  </div>
+  
+  <div class="container">
+    <h3 class="h3-info">Following wrapped in <i>container</i></h3>
+    {{> Grid444}}
+  </div>
+  
   <div class="container">{{> Grid48}}</div>
+
+  {{> Headings}}
+  {{> StylingParagraphs}}
+  {{> DescriptionList}}
+  {{> BlockQuote}}
+  {{> TypographyClass}}
+
+  <div class="bottom"></div>
 </body>
 
 <template name="Container">
@@ -33,7 +54,7 @@
 </template>
 
 <template name="Grid48">
-  <div class="row">
+  <div class="row grid48">
     {{> Col type="sm-4"}}
     {{> Col type="sm-8"}}
   </div>
@@ -43,4 +64,87 @@
   <div class="col-{{type}}">
     <p>This is a <i>.col-{{type}}</i></p>
   </div>
+</template>
+
+<template name="Headings">
+  <div class="container">
+    <h1>{{> H type="1"}} <small>All headers are wrapped in a <i>container</i></small></h1>
+    <h2>{{> H type="2"}}</h2>
+    <h3>{{> H type="3"}}</h3>
+    <h4>{{> H type="4"}}</h4>
+    <h5>{{> H type="5"}}</h5>
+    <h6>{{> H type="6"}}</h6>
+  </div>
+</template>
+
+<template name="H">
+  This is h{{type}} baby
+</template>
+
+<template name="SectionHeading">
+  <div class="container-fluid">
+    <h1>New Heading for {{section}}</h1>
+  </div>
+</template>
+
+<template name="StylingParagraphs">
+  {{> SectionHeading section="styyling paragraphs"}}
+  <div class="container">
+    <p>This paragraph contains a word styled with <mark>&#60;mark&#62;</mark></p>
+    <p>This paragraph contains a word styled with <abr>&#60;abbr&#62;</abr></p>
+    <p>This paragraph contains a word styled with <code>&#60;code&#62;</code></p>
+    <p>This paragraph contains a word styled with <kbd>&#60;kbd&#62;</kbd></p>
+    <pre>This paragraph is styled with &#60;pre&#62;, which is fixed spaced and preerves    spaces   and 
+
+line breaks</pre>
+  </div>
+</template>
+
+<template name="DescriptionList">
+{{> SectionHeading section="description list"}}
+<div class="container">
+  <dl class="dl-horizontal">
+    <dt>&#60;dt&#62; defines a term in a description list</dt>
+    <dd>&#60;dd&#62; describes a term in a description list</dd>
+    <dt>.dl-orizontal</dt>
+    <dd>Makes the list start as a regular description list</dd>
+    <dd>But lines stuff up horizontally on bigger screens</dd>
+    <dt>Coffee</dt>
+    <dd>Oh sweet coffee thy be hallowed</dd>
+    <dt>Tea</dt>
+    <dd>What is this beverage</dd>
+    <dd>I cannot even</dd>
+  </dl>
+</div>
+</template>
+
+<template name="BlockQuote">
+  {{> SectionHeading section="blockquote"}}
+  <div class="container">
+    <blockquote>
+      <p>For 50 years, each year passed with 365 days, although some hade 366 days, but never 367. This could have been ongoing for a lot longer than 50 years for all that we know, but what does one really know for certain. After all you could imagine some evil daemon :S</p>
+      <footer>Actual quote</footer>
+    </blockquote>
+  </div>
+</template>
+
+<template name="TypographyClass">
+  {{> SectionHeading section="Typography classes"}}
+  <div class="container">
+    <ul>
+      {{> TypographyElement class="text-center"}}
+      {{> TypographyElement class="text-right"}}
+      {{> TypographyElement class="text-left"}}
+      {{> TypographyElement class="text-important"}}
+      {{> TypographyElement class="text-success"}}
+      {{> TypographyElement class="text-info"}}
+      {{> TypographyElement class="text-warning"}}
+      {{> TypographyElement class="text-danger"}}
+
+    </ul>
+  </div>
+</template>
+
+<template name="TypographyElement">
+  <li class="{{class}}">Styled with the .{{class}} class</li>
 </template>
