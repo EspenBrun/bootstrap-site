@@ -1,0 +1,20 @@
+<template name="Typography">
+  {{> SectionHeader section="Typography classes"}}
+  <div class="container">
+    <ul>
+      {{> TypographyElement class="text-center"}}
+      {{> TypographyElement class="text-right"}}
+      {{> TypographyElement class="text-left"}}
+      {{> TypographyElement class="text-important"}}
+      {{> TypographyElement class="text-success"}}
+      {{> TypographyElement class="text-info"}}
+      {{> TypographyElement class="text-warning"}}
+      {{> TypographyElement class="text-danger"}}
+
+    </ul>
+  </div>
+</template>
+
+<template name="TypographyElement">
+  <li class="{{class}}">Styled with the .{{class}} class</li>
+</template>

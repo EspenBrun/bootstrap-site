@@ -1,0 +1,15 @@
+<template name="Headers">
+{{> SectionHeader section="headers"}}
+  <div class="container">
+    <h1>{{> H type="1"}} <small>All headers are wrapped in a single <i>container</i></small></h1>
+    <h2>{{> H type="2"}}</h2>
+    <h3>{{> H type="3"}}</h3>
+    <h4>{{> H type="4"}}</h4>
+    <h5>{{> H type="5"}}</h5>
+    <h6>{{> H type="6"}}</h6>
+  </div>
+</template>
+
+<template name="H">
+  This is h{{type}} baby
+</template>
